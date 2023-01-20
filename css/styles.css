@@ -674,11 +674,11 @@ button:focus {
 .footer-sending {
   display: flex;
   align-items: flex-end;
+  margin-left: auto;
 }
 
 /* --------- */
 .footer-input {
-  margin-left: 93px;
 }
 .footer-sending-label {
   display: block;
