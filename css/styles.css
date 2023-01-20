@@ -780,6 +780,11 @@ button:focus {
 .close-btn:focus {
   fill: #2196f3;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .modal-h {
   font-weight: 700;
   font-size: 20px;
@@ -826,6 +831,7 @@ button:focus {
 .modal-input:focus + .modal-icon {
   fill: #2196f3;
 }
+/* TEXTAREA */
 .modal-textarea {
   width: 448px;
   height: 120px;
@@ -847,30 +853,56 @@ button:focus {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0, 5);
 }
+/* Check-block */
+.check-block {
+}
+/* LABEL */
 .check-label {
   color: #757575;
+  display: inline-flex;
+  align-items: center;
 }
 .check-label-link {
   color: #2196f3;
 }
+/* INPUT CHECK BOX */
 .modal-check-box {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.check-label + .modal-check-box {
+  user-select: none;
+}
+.check-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  cursor: pointer;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
   margin-right: 7px;
 }
-.modal-check-box:checked .icon-check {
-  background-image: url(../image/sprait_new.svg/icon-check-mark);
+.modal-check-box:checked + .check-label::before {
+  background-image: url(../image/cheked.png);
   background-color: #2196f3;
   background-repeat: no-repeat;
   background-position: center;
-  border-color: #2196f3;
+  border: none;
 }
+
 .check-label-link {
   margin-left: 4px;
 }
+/* SEND BTN */
 .send {
-  position: relative;
-  left: 50%;
-  top: 30px;
-  transform: translateX(-50%);
+  margin-top: 30px;
   width: 200px;
   height: 50px;
   background: #188ce8;

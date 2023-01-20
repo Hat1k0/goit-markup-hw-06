@@ -446,17 +446,19 @@
         </div>
         <div class="footer-sending">
           <div class="footer-input">
-            <label class="footer-sending-label" for="footer-sending-input"
-              >ПІДПИШІТЬСЯ НА РОЗСИЛКУ</label
-            >
+            <form>
+              <label class="footer-sending-label" for="footer-sending-input"
+                >ПІДПИШІТЬСЯ НА РОЗСИЛКУ</label
+              >
 
-            <input
-              class="footer-sending-input"
-              type="email"
-              id="name"
-              name="footer-sending-input"
-              placeholder="E-mail"
-            />
+              <input
+                class="footer-sending-input"
+                type="email"
+                id="footer-sending-input"
+                name="footer-sending-input"
+                placeholder="E-mail"
+              />
+            </form>
           </div>
           <div>
             <button class="footer-send-btn" type="button">
@@ -480,21 +482,21 @@
           <p class="modal-h">Залиште свої дані, ми вам передзвонимо</p>
           <div>
             <label class="modal-label" for="name">Ім'я</label
-            ><input class="modal-input" type="text" name="name" />
+            ><input class="modal-input" type="text" id="name" name="name" />
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./image/sprait_new.svg#icon-profil"></use>
             </svg>
           </div>
           <div>
             <label class="modal-label" for="tell">Телефон</label
-            ><input class="modal-input" type="tell" name="tell" />
+            ><input class="modal-input" type="tell" id="tell" name="tell" />
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./image/sprait_new.svg#icon-tell"></use>
             </svg>
           </div>
           <div>
             <label class="modal-label" for="email">Пошта</label
-            ><input class="modal-input" type="email" name="email" />
+            ><input class="modal-input" type="email" id="email" name="email" />
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./image/sprait_new.svg#icon-mail"></use>
             </svg>
@@ -503,26 +505,28 @@
             <label class="modal-label" for="textarea">Коментар</label>
             <textarea
               name="textarea"
-              id=""
+              id="textarea"
               cols="30"
               rows="9"
               class="modal-textarea"
               type="text"
               placeholder="Введіть текст"
-              rows="9"
             >
             </textarea>
           </div>
-          <div>
-            <label class="check-label" for="modal-label-check-box">
-              <input
-                class="modal-check-box"
-                type="checkbox"
-                id="check-box"
-                name="check-box"
-              />Погоджуюся з розсилкою та приймаю
-              <span class="icon-check"></span>
-              <a class="check-label-link" href="#">Умови договору</a>
+          <div class="check-block">
+            <input
+              class="modal-check-box"
+              type="checkbox"
+              id="modal-label-check-box"
+              name="check-box"
+            />
+            <label class="check-label" for="modal-label-check-box"
+              >Погоджуюся з розсилкою та приймаю<a
+                class="check-label-link"
+                href="#"
+                >Умови договору</a
+              >
             </label>
           </div>
           <button class="send">Відправити</button>
